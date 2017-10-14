@@ -42,7 +42,7 @@ You should find the compiled firmware file app1.hex (428,496 bytes)
 
 NOTE:
 =
-   - If you have WinAVR, cygwin or any other gcc installed, you might get errors.  Use where.exe command to make the correct arm-none-eabi-gcc.exe and cc1.exe are used.
+   - If you have WinAVR, cygwin or any other gcc installed, you might get errors.  Use where.exe command to make sure the correct arm-none-eabi-gcc.exe and cc1.exe are being used.
    - Before recompiling type: del *.o 
 
 Optional for HW 2.81 and later DEVICES ONLY
