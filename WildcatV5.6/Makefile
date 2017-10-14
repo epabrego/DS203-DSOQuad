@@ -31,7 +31,6 @@ LDFLAGS = -mcpu=cortex-m3 -lc -mthumb -march=armv7 -mfix-cortex-m3-ldrd -msoft-f
 
 # tried LDFLAGS = -mcpu=cortex-m3 -mthumb -march=armv7 -mfix-cortex-m3-ldrd -msoft-float
 
-
 OBJS = Calibrat.o Draw.o Files.o Function.o Interrupt.o Main.o Menu.o Process.o BIOS.o startup.o stm32f10x_nvic.o
 OBJS +=cortexm3_macro.o
 #TARGETS = app1.hex app2.hex app3.hex
