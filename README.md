@@ -33,8 +33,8 @@ Test the compiler
 
 Lets build the binary
 -
-- type: cs-make
-![Image 1](screenshots/cmd.png)
+- type: cs-make                                                          
+![cmd.exe](screenshots/cmd.png)
 
 You should find the compiled firmware file app1.hex (428,496 bytes)
 -
