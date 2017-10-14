@@ -2,9 +2,10 @@ WildcatV5.6 for HW 2.72 and older DEVICES ONLY
 =
 WildcatV6.5 for HW 2.81 and later DEVICES ONLY
 =
-How to compile on a Windows Machine
+*** How to compile on a Windows Machine ***
 -
-- Choose one option:
+Choose one option:
+-
 - Option 1. Download Exe Installer
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi.exe
 
@@ -25,7 +26,7 @@ Open a new Command Prompt Window
 Test the compiler
 -
 - type: arm-none-eabi-gcc.exe -v
-- output:
+   - output:
 Using built-in specs.
 COLLECT_GCC=arm-none-eabi-gcc
 COLLECT_LTO_WRAPPER=c:/arm-2014.05/bin/../libexec/gcc/arm-none-eabi/4.8.3/lto-wrapper.exe
@@ -45,7 +46,7 @@ gcc version 4.8.3 20140320 (prerelease) (Sourcery CodeBench Lite 2014.05-28)
 Lets build the binary
 -
 - type: cs-make
-- output:
+   - output:
 arm-none-eabi-gcc -Wall -O2 -I. -Iinc  -Werror -mcpu=cortex-m3 -mthumb -fno-common -fzero-initialized-in-bss -msoft-float -MD -I FWLib/inc -c -o Calibrat.o Calibrat.c
 arm-none-eabi-gcc -Wall -O2 -I. -Iinc  -Werror -mcpu=cortex-m3 -mthumb -fno-common -fzero-initialized-in-bss -msoft-float -MD -I FWLib/inc -c -o Draw.o Draw.c
 arm-none-eabi-gcc -Wall -O2 -I. -Iinc  -Werror -mcpu=cortex-m3 -mthumb -fno-common -fzero-initialized-in-bss -msoft-float -MD -I FWLib/inc -c -o Files.o Files.c
@@ -71,16 +72,15 @@ Optional for HW 2.81 and later DEVICES ONLY
 -
 -To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
 
-Credits and contributors:
-======================
-- jakub.jelinek
-- Wildcat
-- Seeed-Studio
-- Marco Sinatti (marcosin)
-- Gabriel Valky (gabonator1)
-- pmoss69
-- JackTheVendicator
-- bobtidey 
-- JPA 
-- Jerson 
-- original authors minidso
+- Credits and contributors:
+   - jakub.jelinek
+   - Wildcat
+   - Seeed-Studio
+   - Marco Sinatti (marcosin)
+   - Gabriel Valky (gabonator1)
+   - pmoss69
+   - JackTheVendicator
+   - bobtidey 
+   - JPA 
+   - Jerson 
+   - original authors minidso
