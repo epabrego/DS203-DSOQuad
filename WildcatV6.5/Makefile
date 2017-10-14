@@ -48,7 +48,7 @@ clean:
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $*.c
 
-.S.o:
+.s.o:
 	$(CC) $(AFLAGS) -c -o $@ $*.S
 
 %.elf: %.lds $(OBJS)
