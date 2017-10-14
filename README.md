@@ -1,6 +1,7 @@
-Wildcat V6.5 for hw2.81+ (not compatible with older devices)
+WildcatV5.6 for OLDER DEVICES ONLY
 =
-
+WildcatV6.5 for HW 2.81 and later DEVICES ONLY
+=
 How to compile on a Windows Machine
 ===================================
 
