@@ -1,0 +1,1154 @@
+Archive member included because of file (symbol)
+
+c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+                              Files.o (memcmp)
+c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                              Files.o (memcpy)
+c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                              Files.o (memset)
+c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
+                              Menu.o (strcpy)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x0800c000         0x00010000         xr
+extra            0x08048000         0x00020000         xr
+ram              0x20003000         0x0000c000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Calibrat.o
+LOAD Draw.o
+LOAD Files.o
+LOAD Function.o
+LOAD Interrupt.o
+LOAD Main.o
+LOAD Menu.o
+LOAD Process.o
+LOAD BIOS.o
+LOAD startup.o
+LOAD stm32f10x_nvic.o
+LOAD cortexm3_macro.o
+LOAD c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+START GROUP
+LOAD c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/thumb2\libgcc.a
+LOAD c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a
+END GROUP
+                0x2000e400                _estack = ((ORIGIN (ram) + 0xc000) - 0xc00)
+                0x00000000                . = 0x0
+
+.bios           0x08004200       0xbf
+ BIOS.o()
+ .text          0x08004200       0x9e BIOS.o
+                0x08004200                __CTR_HP
+                0x08004204                __USB_Istr
+                0x08004208                __LCD_Initial
+                0x0800420c                __Point_SCR
+                0x08004210                __LCD_SetPixl
+                0x08004214                __Clear_Screen
+                0x08004218                __Get_TAB_8x14
+                0x0800421c                __LCD_Set_Block
+                0x08004220                __LCD_DMA_Ready
+                0x08004224                __LCD_Copy
+                0x08004228                __LCD_Fill
+                0x0800422c                __Row_DMA_Ready
+                0x08004230                __Row_Copy
+                0x08004234                __Read_FIFO
+                0x08004238                __Input_Lic
+                0x0800423c                __GetDev_SN
+                0x08004240                __Chk_SYS
+                0x08004244                __Ident
+                0x08004248                __Display_Str
+                0x0800424c                __Set
+                0x08004250                __Set_Param
+                0x08004254                __Get
+                0x08004258                __ExtFlash_PageWR
+                0x0800425c                __ExtFlash_PageRD
+                0x08004260                __ReadDiskData
+                0x08004264                __ProgDiskPage
+                0x08004268                __LCD_GetPixl
+                0x0800426c                __USB_Init
+                0x08004270                __FLASH_Erase
+                0x08004274                __FLASH_Prog
+                0x08004278                __FLASH_Unlock
+                0x0800427c                __FLASH_Lock
+                0x08004280                __Chk_DFU
+                0x08004284                __Chk_HDW
+                0x08004288                __OpenFileWr
+                0x0800428c                __OpenFileRd
+                0x08004290                __ReadFileSec
+                0x08004294                __ProgFileSec
+                0x08004298                __CloseFile
+                0x0800429c                __Row_Fill
+ .data          0x0800429e        0x0 BIOS.o
+ .bss           0x0800429e        0x0 BIOS.o
+ .ARM.attributes
+                0x0800429e       0x21 BIOS.o
+
+.isr_vector     0x0800c000     0xf1a0
+                0x0800c000                _vectors = .
+ *(.isr_vectors)
+ .isr_vectors   0x0800c000      0x130 startup.o
+                0x0800c000                g_pfnVectors
+                0x0800c130                . = ALIGN (0x4)
+ *(.text.startup)
+ .text.startup  0x0800c130     0x87ac Main.o
+                0x0800c130                main
+ Main.o(.text)
+ .text          0x080148dc     0x218c Main.o
+                0x080148dc                MeterDefaults
+                0x08014a68                DisableMeter
+                0x08014b2c                EnableTitleMeters
+                0x08014bbc                UpdateBigMeters
+                0x08014cc0                EnableMeter
+                0x08014e24                UpdateMeterPage
+                0x08015120                GetHoldoffIndPos
+                0x08015164                EnableChannel
+                0x080151b0                UpdateTriggerMem
+                0x080151d8                SelUpdate
+                0x0801520c                TriggFlagUpdate
+                0x08015224                MessageHandler
+                0x0801523c                CurDetailUpdate
+                0x08015274                ChannelStatus
+                0x08015300                MeterUpdate
+                0x0801536c                TrigMemory
+                0x080153f8                BackLight
+                0x08015428                PWMdutyControl
+                0x0801547c                PWMscaleReset
+                0x08015644                SetIRQ2Priority
+                0x080156e4                BurstAdjust
+                0x08015750                InitChart
+                0x08015828                Config_init
+                0x08015b64                ConfigFile
+                0x08015cfc                ProcessEditName
+                0x0801622c                ResetEditList
+                0x08016338                CursorSpeedLogic
+                0x080163ac                UpdateFrameMode
+                0x080165b8                LeftToggleSpecialFunctions
+ Calibrat.o(.text)
+ .text          0x08016a68     0x20a8 Calibrat.o
+                0x08016a68                ClearTop
+                0x08016ab4                Calibrat
+ *(.rodata*)
+ .rodata        0x08018b10      0x188 Calibrat.o
+                0x08018b10                CenterStr
+                0x08018b4c                ClockEntry
+                0x08018c10                CenterStep
+                0x08018c30                VS_STR
+                0x08018c90                V_UNIT1
+ .rodata.str1.4
+                0x08018c98      0x38d Calibrat.o
+                                0x3a4 (size before relaxing)
+ *fill*         0x08019025        0x3 00
+ .rodata        0x08019028      0x6d8 Draw.o
+                0x08019028                Char_TAB_8x11
+                0x08019628                Mark_TAB
+                0x0801965c                DbScale
+                0x0801967c                DetFrqAdj
+                0x08019688                RULE_BASE
+                0x08019698                CursorTypeStr
+                0x080196ac                FrameCountRef
+                0x080196d8                Mark_TAB_T
+                0x080196e0                Mark_TAB_4
+                0x080196e8                Mark_TAB_3
+                0x080196f0                Mark_TAB_2
+                0x080196f8                Mark_TAB_1
+ .rodata.str1.4
+                0x08019700       0x2c Draw.o
+                                 0x34 (size before relaxing)
+ .rodata        0x0801972c      0x318 Files.o
+                0x0801972c                DiskDevInfo_8M
+                0x0801973c                Clk
+                0x08019754                BMP_Color
+                0x08019774                ErrorCode
+                0x0801979c                SubSamplingPeriod
+                0x08019804                SamplingPeriod
+                0x080198b4                OSsampling
+                0x080198ec                Sampling
+                0x08019924                DigSampling
+                0x08019954                AmplitudeSteps
+                0x08019984                AmplitudeX10Steps
+                0x080199b4                Offset
+                0x080199bc                BmpHead64
+                0x08019a00                BmpHead16
+                0x08019a38                SPeriod
+                0x08019a40                FatStart
+ .rodata.str1.4
+                0x08019a44       0x78 Files.o
+ .rodata        0x08019abc      0x104 Function.o
+                0x08019abc                SineQuad
+ .rodata        0x08019bc0       0x84 Main.o
+                0x08019bd8                TrigReset
+                0x08019c04                NoteTimer
+                0x08019c0c                DisableSTR
+                0x08019c34                NoneStr
+ .rodata.str1.4
+                0x08019c44      0x5a4 Main.o
+                                0x5b0 (size before relaxing)
+ .rodata        0x0801a1e8      0x704 Menu.o
+                0x0801a1e8                Y_INV
+                0x0801a1fc                METER
+                0x0801a238                Y_COLOR
+                0x0801a244                T_UNIT
+                0x0801a250                FFT_GAIN_STR
+                0x0801a28c                GEN_UART_MODE_STR
+                0x0801a2a4                X100TbaseScale
+                0x0801a2b4                TrunkFactor
+                0x0801a2bc                TIM2Speed
+                0x0801a2c8                F_UNIT
+                0x0801a2d4                V_UNIT
+                0x0801a2e0                S_UNIT
+                0x0801a2ec                F_UNITSUB
+                0x0801a2f8                P_UNIT
+                0x0801a304                MM_UNIT
+                0x0801a314                DD_UNIT
+                0x0801a324                H_UNIT
+                0x0801a334                M_UNIT
+                0x0801a344                D_UNIT
+                0x0801a354                VV_UNIT
+                0x0801a360                XY_CH_A_STR
+                0x0801a394                XY_CH_B_STR
+                0x0801a3c8                SubStr
+                0x0801a44c                Vol_Str
+                0x0801a454                BL_Str
+                0x0801a45c                DELTA_T
+                0x0801a464                DELTA_V
+                0x0801a478                F_INV
+                0x0801a47c                F_EXT
+                0x0801a4cc                F_FUNC
+                0x0801a4e4                T_COLOR
+                0x0801a4e8                T_INV
+                0x0801a4ec                V_COLOR
+                0x0801a4f0                V_INV
+                0x0801a4f4                VERNIE4
+                0x0801a4fc                VERNIE3
+                0x0801a504                VERNIE2
+                0x0801a50c                VERNIE1
+                0x0801a514                DELAY_STR
+                0x0801a518                VT_STR
+                0x0801a51c                TR_TYPE
+                0x0801a578                TRIGSTR
+                0x0801a5ac                FO_STR
+                0x0801a694                FO_TYPE
+                0x0801a6f0                XCOLOR
+                0x0801a6f4                XPOSISTR
+                0x0801a6fc                MODESTR
+                0x0801a744                YPOSISTR
+                0x0801a74c                YCOUPLE_B
+                0x0801a780                YCOUPLE
+                0x0801a7c8                NO_DEF
+                0x0801a7cc                NO_RANGE
+                0x0801a7d0                CH_D_STR
+                0x0801a870                CH_C_STR
+                0x0801a884                B_COLOR
+                0x0801a890                BATT_STR
+                0x0801a8c4                S_Inv
+                0x0801a8cc                STATESTR
+ .rodata.str1.4
+                0x0801a8ec      0x280 Menu.o
+                                0x298 (size before relaxing)
+ .rodata        0x0801ab6c      0x634 Process.o
+                0x0801ab6c                A_Freq
+                0x0801abb4                TbaseSub
+                0x0801ac1c                Log10Mant
+                0x0801ac80                SIN_QUAD
+                0x0801adec                ScaleIndex
+                0x0801ae00                DIGI_DATA
+                0x0801ae04                Sine100K
+                0x0801ae28                Triangle100K
+                0x0801ae4c                TimeBase
+                0x0801ae78                A_Tab
+                0x0801ae9c                TbaseOS
+                0x0801aee0                Wait
+                0x0801af0c                Window
+                0x0801b10c                shortwait
+                0x0801b138                TrigDelayLoop
+                0x0801b14c                AltDelay
+                0x0801b178                Triangle200K
+                0x0801b18c                Sine200K
+
+.extra          0x08048000    0x1fdc8
+                0x08048000                . = ALIGN (0x4)
+ *(.text*)
+ .text          0x08048000     0x86c0 Draw.o
+                0x08048000                Get_TAB_8x11
+                0x08048014                Print_Str
+                0x0804833c                PrintText
+                0x0804844c                PrintConfigName
+                0x08048520                Print_Str2
+                0x080488f8                Draw_Mark
+                0x08048afc                InitiateCharArrays
+                0x08048b54                LoadChars
+                0x08049134                IndexPosition
+                0x08049184                Uart
+                0x080496cc                BitReadPosition
+                0x08049834                Spi
+                0x08049c90                i2c
+                0x08049f0c                LoadBuffer
+                0x0804a2b0                Print_Str_Row
+                0x0804a3e0                DisplayFFtValues
+                0x0804a698                DisplayDbScale
+                0x0804ab60                LoadFFTbuffer
+                0x0804aee0                PrintDir
+                0x0804b404                SpiChart
+                0x0804b968                PrintUart
+                0x0804c5cc                DisplayDetFrqn
+                0x0804caf0                VernierMark
+                0x0804cb14                LoadBaseBuffers
+                0x0804cba4                TraceShadow
+                0x0804cc18                Base1
+                0x0804cc48                ClearFFTbuffer
+                0x0804cc64                ScaleXposi
+                0x0804cce4                ClearScreenArea
+                0x0804cd50                Clear_Meter_Area
+                0x0804cd74                NFreqParse
+                0x0804cde0                ColorIndexGen
+                0x0804ceb4                DrawPixel
+                0x0804cec8                LoadXYBuffer
+                0x0804d394                Update_View_Area
+                0x0804dbd0                DrawBase
+                0x0804dbec                UartLogic
+                0x0804dc28                i2cLogic
+                0x0804dc68                SpiLogic
+                0x0804dca8                Update_Mark
+                0x0804e07c                UpdateMarkLogic
+                0x0804e0ac                DisplayDeltaValues
+                0x0804e21c                DisplayCursorValues
+                0x0804e36c                Draw_Row
+                0x0804f214                Draw_Window
+ .text          0x080506c0     0x6974 Files.o
+                0x080506c0                InitFileSystem
+                0x08050770                Print_Clk
+                0x080507a8                Make_Filename
+                0x080507d4                Color_Num
+                0x080508e0                Load_Dat
+                0x08050a54                Load_Bmp
+                0x08050c8c                WriteFileSec
+                0x08050cd0                Load_Arbt
+                0x08050ec8                DeleteFile
+                0x08051160                FileMessage
+                0x08051210                ReadDir
+                0x08051bd0                FileEntryAdd
+                0x08051c94                Load_Uart
+                0x08051dd0                save_parameter
+                0x08052054                reset_parameter
+                0x08052300                WriteSector
+                0x08052320                Save_Dat
+                0x080524bc                Save_Img
+                0x08052654                CSVdataModeLogic
+                0x080526cc                CSVdata
+                0x080527a4                OverWriteWarn
+                0x08052854                Save_Csv
+                0x08053bc0                Save_Buf
+                0x08053f14                Save_Bmp
+                0x08054318                ProcessConfigName
+                0x080547fc                Save_Param
+                0x08055a44                Load_Param
+                0x08056c6c                UpdateFileMenu
+                0x08056cb0                Load_Buf
+ .text          0x08057034     0x128c Function.o
+                0x08057034                LoadNwave
+                0x080570cc                Power
+                0x0805710c                Delayms
+                0x08057120                Int2Str
+                0x080575a0                u8ToDec3
+                0x08057604                u32ToDec7
+                0x080576b8                s8ToPercen
+                0x0805771c                u8ToDec2
+                0x08057758                Char2Hex
+                0x08057794                Word2Hex
+                0x0805788c                Int_sqrt
+                0x080579bc                Read_Keys
+                0x08057cec                s16ToDec3
+                0x08057d4c                AsciiToU16
+                0x08057dbc                s8ToDec2
+                0x08057e24                S32ToFloat3
+                0x08057f70                fix_fft
+                0x08058144                ProcessFileName
+ .text          0x080582c0      0xc8c Interrupt.o
+                0x080582c0                NMIException
+                0x080582c4                HardFaultException
+                0x080582c8                MemManageException
+                0x080582cc                BusFaultException
+                0x080582d0                UsageFaultException
+                0x080582d4                DebugMonitor
+                0x080582d8                SVCHandler
+                0x080582dc                PendSVC
+                0x080582e0                SysTickHandler
+                0x080582e4                WWDG_IRQHandler
+                0x080582e8                PVD_IRQHandler
+                0x080582ec                TAMPER_IRQHandler
+                0x080582f0                RTC_IRQHandler
+                0x080582f4                FLASH_IRQHandler
+                0x080582f8                RCC_IRQHandler
+                0x080582fc                EXTI0_IRQHandler
+                0x08058300                EXTI1_IRQHandler
+                0x08058304                EXTI2_IRQHandler
+                0x08058308                EXTI3_IRQHandler
+                0x0805830c                EXTI4_IRQHandler
+                0x08058310                DMA1_Channel1_IRQHandler
+                0x08058314                DMA1_Channel2_IRQHandler
+                0x08058318                DMA1_Channel3_IRQHandler
+                0x0805831c                DMA1_Channel4_IRQHandler
+                0x08058320                DMA1_Channel5_IRQHandler
+                0x08058324                DMA1_Channel6_IRQHandler
+                0x08058328                DMA1_Channel7_IRQHandler
+                0x0805832c                ADC1_2_IRQHandler
+                0x08058330                USB_HP_CAN_TX_IRQHandler
+                0x08058334                USB_LP_CAN_RX0_IRQHandler
+                0x08058338                CAN_RX1_IRQHandler
+                0x0805833c                CAN_SCE_IRQHandler
+                0x08058340                EXTI9_5_IRQHandler
+                0x08058344                TIM1_BRK_IRQHandler
+                0x08058348                TIM1_UP_IRQHandler
+                0x0805834c                TIM1_TRG_COM_IRQHandler
+                0x08058350                TIM1_CC_IRQHandler
+                0x08058354                TIM2_IRQHandler
+                0x0805893c                TIM3_IRQHandler
+                0x08058c40                TIM4_IRQHandler
+                0x08058ed8                I2C1_EV_IRQHandler
+                0x08058edc                I2C1_ER_IRQHandler
+                0x08058ee0                I2C2_EV_IRQHandler
+                0x08058ee4                I2C2_ER_IRQHandler
+                0x08058ee8                SPI1_IRQHandler
+                0x08058eec                SPI2_IRQHandler
+                0x08058ef0                USART1_IRQHandler
+                0x08058ef4                USART2_IRQHandler
+                0x08058ef8                USART3_IRQHandler
+                0x08058efc                EXTI15_10_IRQHandler
+                0x08058f00                RTCAlarm_IRQHandler
+                0x08058f04                USBWakeUp_IRQHandler
+                0x08058f08                TIM8_BRK_IRQHandler
+                0x08058f0c                TIM8_UP_IRQHandler
+                0x08058f10                TIM8_TRG_COM_IRQHandler
+                0x08058f14                TIM8_CC_IRQHandler
+                0x08058f18                ADC3_IRQHandler
+                0x08058f1c                FSMC_IRQHandler
+                0x08058f20                SDIO_IRQHandler
+                0x08058f24                TIM5_IRQHandler
+                0x08058f28                SPI3_IRQHandler
+                0x08058f2c                UART4_IRQHandler
+                0x08058f30                UART5_IRQHandler
+                0x08058f34                TIM6_IRQHandler
+                0x08058f38                TIM7_IRQHandler
+                0x08058f3c                DMA2_Channel1_IRQHandler
+                0x08058f40                DMA2_Channel2_IRQHandler
+                0x08058f44                DMA2_Channel3_IRQHandler
+                0x08058f48                DMA2_Channel4_5_IRQHandler
+ .text          0x08058f4c     0x5c4c Menu.o
+                0x08058f4c                Display_Meter
+                0x080591a8                Load_Attr
+                0x0805922c                Update_Battery
+                0x08059340                DisplayBigMeter
+                0x08059660                TimeScaleCorrection
+                0x080596d4                UpScale
+                0x08059798                CalculateTimeMeters
+                0x08059920                ClockAdjust
+                0x08059974                Period
+                0x080599d8                MeterChannelLogic
+                0x08059ab8                FFTlevel
+                0x08059c5c                DisplaySamples
+                0x0805b06c                GenTrigColor
+                0x0805b0f8                UpdatePWMDuty
+                0x0805b194                OutputAdjust
+                0x0805b3c4                TIM_2IRQControl
+                0x0805b4b0                SyncSweep
+                0x0805b57c                DetStatusLogic
+                0x0805b5e4                ChDetLogic
+                0x0805b62c                AlignTbaseSweep
+                0x0805b770                ChartLogic
+                0x0805b79c                ListLogic
+                0x0805b7b8                EditListActive
+                0x0805b7ec                UpdateEditBox
+                0x0805b87c                KpCompensation
+                0x0805b8e4                Display_Value
+                0x0805c7d4                CalculateTvernier
+                0x0805d15c                ProcessCursorDisplayStr
+                0x0805d180                CalculateVvernier
+                0x0805d368                Display_Title
+                0x0805e02c                AutoSet
+ .text          0x0805eb98     0x8aa0 Process.o
+                0x0805eb98                BackGround_Reset
+                0x0805ed78                App_init
+                0x0805edb8                ResetDMA2_Ch4Params
+                0x0805ee28                CalculateArbtTimer
+                0x0805eef4                UpdateTLevels
+                0x0805ef78                Send_Data
+                0x0805f12c                get_bag_max_buf
+                0x0805f218                Beeper
+                0x0805f248                cleardatabuf
+                0x0805f3e4                TransferFIFO
+                0x0805f870                SetOffset
+                0x0805f8d0                InterpolateS8
+                0x0805f910                InterpolateU16
+                0x0805f950                BatLevelCompensation
+                0x0805fe04                QParam
+                0x0805ff68                QError
+                0x0805ffe4                VRunAvg
+                0x0806001c                RunAvg
+                0x08060080                Average
+                0x080602b4                ClearHold
+                0x08060310                ClearMinMax
+                0x0806036c                ClearTrackBuff
+                0x08060400                Log10Process
+                0x08060494                WaveValue
+                0x0806050c                WaveGen
+                0x080609c4                InitiateCalData
+                0x08060cac                InitiateOSBuffers
+                0x08060dec                RandomGen
+                0x08060e10                TriggerModeLogic
+                0x08060e58                OSBufferLogic
+                0x08060ef0                Update_Trig
+                0x080614cc                AlternateChannel
+                0x08061544                Update_Output
+                0x08061d04                Update_Range
+                0x08061ddc                Update_Base
+                0x08061f98                GetXposRef
+                0x0806203c                GetXpos
+                0x080620ac                CursorDisplaySelectLogic
+                0x080621d0                UpdateCursorMeter
+                0x08062210                DownConvertRestore
+                0x08062288                FFTdownConvert
+                0x08062b38                ResetSum
+                0x08062c5c                ClearMeters
+                0x08062ca4                Process
+                0x08066b78                Synchro
+ .text          0x08067638       0xc8 startup.o
+                0x08067638                __Init_Data
+                0x080676e4                Reset_Handler
+                0x080676f8                UsageFault_Handler
+                0x080676f8                BusFault_Handler
+                0x080676f8                PendSV_Handler
+                0x080676f8                SysTick_Handler
+                0x080676f8                CAN1_RX1_IRQHandler
+                0x080676f8                Default_Handler
+                0x080676f8                DebugMon_Handler
+                0x080676f8                MemManage_Handler
+                0x080676f8                SVC_Handler
+                0x080676f8                USB_LP_CAN1_RX0_IRQHandler
+                0x080676f8                USB_HP_CAN1_TX_IRQHandler
+                0x080676f8                CAN1_SCE_IRQHandler
+                0x080676f8                MMI_Handler
+                0x080676fc                _init
+ .text          0x08067700      0x3b8 stm32f10x_nvic.o
+                0x08067700                NVIC_DeInit
+                0x08067760                NVIC_SCBDeInit
+                0x08067798                NVIC_PriorityGroupConfig
+                0x080677ac                NVIC_Init
+                0x08067844                NVIC_StructInit
+                0x08067850                NVIC_SETPRIMASK
+                0x08067854                NVIC_RESETPRIMASK
+                0x08067858                NVIC_SETFAULTMASK
+                0x0806785c                NVIC_RESETFAULTMASK
+                0x08067860                NVIC_BASEPRICONFIG
+                0x08067868                NVIC_GetBASEPRI
+                0x0806786c                NVIC_GetCurrentPendingIRQChannel
+                0x0806787c                NVIC_GetIRQChannelPendingBitStatus
+                0x080678a4                NVIC_SetIRQChannelPendingBit
+                0x080678b0                NVIC_ClearIRQChannelPendingBit
+                0x080678cc                NVIC_GetCurrentActiveHandler
+                0x080678dc                NVIC_GetIRQChannelActiveBitStatus
+                0x08067904                NVIC_GetCPUID
+                0x08067910                NVIC_SetVectorTable
+                0x08067928                NVIC_GenerateSystemReset
+                0x0806793c                NVIC_GenerateCoreReset
+                0x08067950                NVIC_SystemLPConfig
+                0x0806796c                NVIC_SystemHandlerConfig
+                0x08067994                NVIC_SystemHandlerPriorityConfig
+                0x080679e4                NVIC_GetSystemHandlerPendingBitStatus
+                0x08067a08                NVIC_SetSystemHandlerPendingBit
+                0x08067a24                NVIC_ClearSystemHandlerPendingBit
+                0x08067a44                NVIC_GetSystemHandlerActiveBitStatus
+                0x08067a68                NVIC_GetFaultHandlerSources
+                0x08067aa4                NVIC_GetFaultAddress
+ .text          0x08067ab8       0x7a cortexm3_macro.o
+                0x08067ab8                __WFI
+                0x08067abc                __WFE
+                0x08067ac0                __SEV
+                0x08067ac4                __ISB
+                0x08067aca                __DSB
+                0x08067ad0                __DMB
+                0x08067ad6                __SVC
+                0x08067ada                __MRS_CONTROL
+                0x08067ae0                __MSR_CONTROL
+                0x08067aea                __MRS_PSP
+                0x08067af0                __MSR_PSP
+                0x08067af6                __MRS_MSP
+                0x08067afc                __MSR_MSP
+                0x08067b02                __RESETPRIMASK
+                0x08067b06                __SETPRIMASK
+                0x08067b0a                __READ_PRIMASK
+                0x08067b10                __RESETFAULTMASK
+                0x08067b14                __SETFAULTMASK
+                0x08067b18                __READ_FAULTMASK
+                0x08067b1e                __BASEPRICONFIG
+                0x08067b24                __GetBASEPRI
+                0x08067b2a                __REV_HalfWord
+                0x08067b2e                __REV_Word
+ *fill*         0x08067b32        0x2 00
+ .text          0x08067b34       0x5c c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+                0x08067b34                memcmp
+ .text          0x08067b90       0xf0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x08067b90                memcpy
+ .text          0x08067c80       0x8c c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x08067c80                memset
+ .text          0x08067d0c       0xbc c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
+                0x08067d0c                strcpy
+
+.text           0x0801b1a0        0x0
+                0x0801b1a0                . = ALIGN (0x4)
+                0x0801b1a0                _etext = .
+                0x0801b1a0                _sidata = _etext
+
+.glue_7         0x0801b1a0        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x0801b1a0        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x0801b1a0        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0801b1a0        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x0801b1a0        0x0
+ .iplt          0x00000000        0x0 Calibrat.o
+
+.rel.dyn        0x0801b1a0        0x0
+ .rel.iplt      0x00000000        0x0 Calibrat.o
+
+.data           0x20003000      0x700 load address 0x0801b1a0
+                0x20003000                _sdata = .
+ *(.data*)
+ .data          0x20003000        0x0 Calibrat.o
+ .data          0x20003000       0x50 Draw.o
+                0x20003000                Color
+                0x20003020                V_Trigg
+                0x20003030                SpiNumBits
+                0x20003032                TcurDelta
+                0x20003034                FrameSize
+                0x20003038                Mask
+                0x2000303a                ClockPeriod
+                0x2000303c                Limit
+                0x2000303e                ChartIndex
+                0x20003040                COLOR_INDEX
+                0x20003046                XYLimit
+                0x20003048                InitXY
+                0x2000304a                SpecRow
+                0x2000304c                DataSize
+ .data          0x20003050       0x18 Files.o
+                0x20003050                RootStart
+                0x20003054                RootStop
+                0x20003058                LastAccessedConfig
+                0x20003064                Ext
+ .data          0x20003068        0x0 Function.o
+ .data          0x20003068       0x2c Interrupt.o
+                0x20003068                FineAdjust
+                0x2000306c                FineAdjustFactor
+                0x2000308e                FineAdjustLimit
+                0x2000308f                Tim2Factor
+                0x20003090                Volume
+ .data          0x20003094       0x90 Main.o
+                0x20003094                UpdateMeter
+                0x20003098                C_Dmeter
+                0x200030a0                Timeout
+                0x200030a4                Show
+                0x200030e4                ChOnStatus
+                0x200030e8                DisplayChart
+ .data          0x20003124      0x544 Menu.o
+                0x20003124                Meter
+                0x20003190                Title
+                0x200035a0                GenBaudRate
+                0x200035a4                GenUartMode
+                0x200035a5                SweepIndex
+                0x200035a6                SweepStep
+                0x200035a7                SweepMod
+                0x200035a8                EnablePWM
+                0x200035ac                EditChar
+                0x200035bc                MinTresh
+                0x200035c0                CH_A_STR
+                0x200035f4                CH_B_STR
+                0x20003628                O_COLOR
+                0x2000362c                x10
+                0x20003662                Update
+                0x20003663                CharValue
+                0x20003664                GenBaudIndex
+ .data          0x20003668       0x98 Process.o
+                0x20003668                Ch1TLevel
+                0x2000366a                Ch2TLevel
+                0x2000366c                BufferSize
+                0x2000366e                ADCoffset
+                0x20003670                bag_max_buf
+                0x2000367c                TrigSourceEnable
+                0x2000367e                ScalingOffset
+                0x20003684                TempKp1
+                0x20003688                InvTrig
+                0x20003690                PrevSource
+                0x20003691                PrevKind
+                0x20003692                StartOffset
+                0x20003693                M_Factor
+                0x20003694                D_Tab
+                0x200036f0                PrevSweepIndex
+                0x200036f4                USART1_DR
+                0x200036f8                EnablePaS
+                0x200036f9                ScrollFlag
+                0x200036fa                Normal
+                0x200036fb                FastMode
+                0x200036fc                Filter
+ .data          0x20003700        0x0 startup.o
+ .data          0x20003700        0x0 stm32f10x_nvic.o
+ .data          0x20003700        0x0 cortexm3_macro.o
+ .data          0x20003700        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+ .data          0x20003700        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .data          0x20003700        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .data          0x20003700        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
+                0x20003700                . = ALIGN (0x4)
+                0x20003700                _edata = .
+
+.igot.plt       0x20003700        0x0 load address 0x0801b8a0
+ .igot.plt      0x00000000        0x0 Calibrat.o
+
+.bss            0x20003700     0x9f70 load address 0x0801b1a0
+                0x20003700                _sbss = .
+ *(.bss)
+ .bss           0x20003700        0x4 Calibrat.o
+                0x20003700                PPM_Comp
+                0x20003702                CalibrateMode
+ .bss           0x20003704      0xf20 Draw.o
+                0x20003704                SkipFirstRow
+                0x20003708                AscCharB
+                0x20003770                AscChar
+                0x200037d8                HexCharB
+                0x20003900                HexChar
+                0x20003a26                ArrayIndex
+                0x20003a28                ByteArray
+                0x20003d28                HexLookup
+                0x20003d2c                BitDuration
+                0x20003d2e                Parity
+                0x20003d2f                ValidFrame
+                0x20003d30                SpiMode
+                0x20003d36                WordEndFlag
+                0x20003d37                SpiBitOrder
+                0x20003d38                DigChLockout
+                0x20003d39                ListBottom
+                0x20003d3a                skip
+                0x20003d3c                LCD_Buffer
+                0x200040fc                Raw
+                0x200040fe                RowMemPeak
+                0x20004100                Nsuffix
+                0x20004104                Nfreq
+                0x2000410e                MAX_X
+                0x20004110                ClearPerst
+                0x20004111                UpdateBackground
+                0x20004112                RowMem
+                0x20004115                SpiChartFlag
+                0x20004118                DetFrqn
+                0x20004140                Base2Buffer
+                0x200042d4                Base3Buffer
+                0x20004468                Base4Buffer
+                0x200045fa                XYper
+                0x200045fc                FactorX
+                0x200045fe                FactorY
+                0x20004600                FactorY13
+                0x20004602                OffsetX
+                0x20004603                OffsetY
+                0x20004604                OSBuffer
+                0x20004608                Tmp2
+                0x2000460c                CursorDisplaySelect
+                0x2000460d                Hbold
+                0x2000460e                EnableCursorDisplay
+                0x20004610                Count_FPS
+                0x20004612                PerstFrameNumber
+                0x20004613                FrameCount
+                0x20004614                Rdiscard
+                0x20004615                SpecMode
+                0x20004616                SpecLine
+                0x20004617                UpdateScale
+                0x20004618                SpiAdj
+                0x20004619                DataAdj
+                0x2000461c                BaudRate
+                0x20004620                DbScaleStr
+                0x20004623                DisableCursorDisplay
+ .bss           0x20004624     0x1fc8 Files.o
+                0x20004624                SectorSize
+                0x20004626                flash_mode
+                0x20004628                SelectedFileName
+                0x20004634                SecBuff
+                0x20005e34                FileBuff
+                0x20006474                ArbtSampleNumber
+                0x20006478                Label
+                0x2000653c                DirRange
+                0x20006540                UartFileSize
+                0x20006544                TempPar
+                0x200065d8                CSVposition
+                0x200065dc                ConfigFileName
+                0x200065e5                Versions
+                0x200065e6                Edited
+                0x200065e7                SaveShortBuffXpos
+                0x200065e8                BufferRestore
+ .bss           0x200065ec      0x304 Function.o
+                0x200065ec                Sinewave
+                0x200068ec                SetLowVolume
+ .bss           0x200068f0      0x110 Interrupt.o
+                0x200068f0                LimitTransfer
+                0x200068f4                Cnt_mS
+                0x200068f6                SweepResetFlag
+                0x200068f7                ClearStatus
+                0x200068f8                BurstLimit
+                0x200068fa                ToneBurstCounter
+                0x200068fc                SpecFrameCount
+                0x20006900                Wait_Cnt
+                0x20006904                Delay_Cnt
+                0x20006906                Beep_mS
+                0x20006908                Cnt_20mS
+                0x2000690a                Sec_Cnt
+                0x2000690c                PD_Cnt
+                0x2000690e                Cursor_Cnt
+                0x20006910                NotificationTimer
+                0x20006912                Twink
+                0x20006913                Blink
+                0x20006914                SecondsTick
+                0x20006916                DelayLoopBreak
+                0x20006918                PersHoldTimer
+                0x2000691a                ConfNameTimer
+                0x2000691c                CursorDisplayTimer
+                0x2000691e                AutoSetTimer
+                0x20006920                RepeatTimerR
+                0x20006921                RepeatTimerL
+                0x20006922                Key_Mid_Speed
+                0x20006923                Key_Wait_Cnt
+                0x20006924                Key_Repeat_Cnt
+                0x20006925                Key_Buffer
+                0x20006926                LoBeepLevel
+                0x2000692e                FilterOut
+                0x20006930                NoiseIP
+                0x200069fa                Key_Status_Last
+                0x200069fc                Light
+ .bss           0x20006a00       0x48 Main.o
+                0x20006a00                FlagMeter
+                0x20006a01                BTwinkState
+                0x20006a02                LastSelected
+                0x20006a04                PreviousTrigSelect
+                0x20006a0c                SelectiveUpdate
+                0x20006a0d                MessageNumber
+                0x20006a10                ChStatus
+                0x20006a14                NVIC_InitStructure
+                0x20006a18                XposRef
+                0x20006a1a                OldTrack1X
+                0x20006a1c                OldTrack2X
+                0x20006a1e                OldMeter
+                0x20006a20                _Vt1Old
+                0x20006a22                _Vt2Old
+                0x20006a24                TrgAutoOld
+                0x20006a25                TrgAuto
+                0x20006a26                FlagFrameMode
+                0x20006a27                ShortBuffXpos
+                0x20006a28                ShowFFT
+                0x20006a2c                SaveCurrent
+                0x20006a2e                XposFlag
+                0x20006a2f                OldFrame
+                0x20006a30                ABTrigStatus
+                0x20006a31                UpdateFlag
+                0x20006a32                UpdateCount
+                0x20006a33                ClearDir
+                0x20006a34                RefreshDisplay
+                0x20006a35                OldCurrent
+                0x20006a36                OSStatus
+                0x20006a37                FastRepeatL
+                0x20006a38                FastRepeatR
+                0x20006a3c                Tmp
+                0x20006a40                OldPosY
+                0x20006a42                OldPosX
+                0x20006a44                OldDet
+ .bss           0x20006a48      0x284 Menu.o
+                0x20006a48                Current
+                0x20006a4c                Vertical
+                0x20006ae4                BaseStr
+                0x20006c10                Cnt_InCharge
+                0x20006c11                Cnt_Charged
+                0x20006c12                Cnt_Batt
+                0x20006c13                FlagInCharge
+                0x20006c14                NumStr
+                0x20006c20                BTwink
+                0x20006c21                ShiftDigits
+                0x20006c24                Detail
+                0x20006c32                DownConvertMode
+                0x20006c33                AutoFFT
+                0x20006c34                AutoSetFlag
+                0x20006c35                OffsetSelect
+                0x20006c36                AutoSaveSelect
+                0x20006c37                AutoSaveBuf
+                0x20006c38                AdjBeepLevel
+                0x20006c39                FastDimAdjust
+                0x20006c3a                FastDim
+                0x20006c3b                HboldAdjust
+                0x20006c3c                GenBaudAdjSpeed
+                0x20006c3d                GenUartStopBits
+                0x20006c3e                GenUartCont
+                0x20006c3f                GenUartAdj
+                0x20006c40                T1Start
+                0x20006c41                PWAdjustMode
+                0x20006c42                GenAdjustMode
+                0x20006c43                Sweep
+                0x20006c44                CurrentARR
+                0x20006c46                GenTrigColorFlag
+                0x20006c48                GenFreqShift
+                0x20006c49                Det
+                0x20006c4a                CharIndex
+                0x20006c4b                DETflag
+                0x20006c4c                Result_FPS
+                0x20006c4e                Ga_Max
+                0x20006c50                Ga_Min
+                0x20006c52                Gb_Max
+                0x20006c54                Gb_Min
+                0x20006c56                NSamples
+                0x20006c58                GHa_Max
+                0x20006c5a                GHb_Max
+                0x20006c5c                GHa_Min
+                0x20006c5e                GHb_Min
+                0x20006c60                LastFreqReadout
+                0x20006c64                N_UNIT
+                0x20006c70                Neg
+                0x20006c71                MinBypass
+                0x20006c74                CursorDisplayStrM
+                0x20006c80                CursorDisplayStr
+                0x20006c8c                CursorDisplayStrH
+                0x20006c98                TNumStr
+                0x20006ca4                VNumStr
+                0x20006cb0                ListOverride
+                0x20006cb1                ConfigFileNumber
+                0x20006cb2                OldCurDefTime
+                0x20006cb4                OldPosi
+                0x20006cb6                MeterStatus
+                0x20006cb7                AutoSequence
+                0x20006cc6                OldMode
+                0x20006cc7                EnableMeterCalc
+                0x20006cc8                PrevShift
+ .bss           0x20006ccc     0x69a4 Process.o
+                0x20006ccc                ClearMeterAreaFlag
+                0x20006cd0                ATT_DATA
+                0x20007270                ARBT_ARR
+                0x20007274                Ka1
+                0x20007280                Ka2
+                0x20007294                Kb1
+                0x200072a0                Kb2
+                0x200072b4                TrackBuff
+                0x200078e8                OsBufferLogicFlag
+                0x200078e9                OsChartFlag
+                0x200078ea                c_Max
+                0x200078ec                Posi_412
+                0x200078ee                Posi_41_2
+                0x200078f0                d_Max
+                0x200078f2                Posi_4F1
+                0x200078f4                Posi_4F2
+                0x200078f6                Posi_4F3
+                0x200078f8                Posi_4F4
+                0x200078fa                FrameMode
+                0x200078fc                Xtend
+                0x200078fe                B_Posi
+                0x20007900                OSAvg
+                0x20007902                A_Posi
+                0x20007904                DataBuf
+                0x2000b904                ReverseBitMask
+                0x2000b908                BitMask
+                0x2000b90c                OsTransferCompleteFlag
+                0x2000b914                Waste
+                0x2000b91c                RMSdata
+                0x2000be98                OsFFTData
+                0x2000c410                ChartMode
+                0x2000c414                SubIndex
+                0x2000c418                Ka3
+                0x2000c424                Kb3
+                0x2000c430                LoBatLevel
+                0x2000c434                VDiff
+                0x2000c438                HiBatLevel
+                0x2000c43c                LKa1
+                0x2000c448                HKa1
+                0x2000c454                LKa2
+                0x2000c468                HKa2
+                0x2000c47c                LKa3
+                0x2000c488                HKa3
+                0x2000c494                LKb1
+                0x2000c4a0                HKb1
+                0x2000c4ac                LKb2
+                0x2000c4c0                HKb2
+                0x2000c4d4                LKb3
+                0x2000c4e0                HKb3
+                0x2000c4ea                InvertA
+                0x2000c4eb                InvertB
+                0x2000c4ec                LastA_Mid
+                0x2000c4ed                LastB_Mid
+                0x2000c4ee                FirstA_Mid
+                0x2000c4ef                FirstB_Mid
+                0x2000c4f0                TaS
+                0x2000c4f2                TbS
+                0x2000c4f4                VNAvg
+                0x2000c4f8                Sum
+                0x2000c508                UTmp
+                0x2000c50c                NAvg
+                0x2000c514                JumpCnt
+                0x2000c518                a_Avg
+                0x2000c51c                VxAvg
+                0x2000c524                a_Ssq
+                0x2000c528                VxSsq
+                0x2000c530                b_Avg
+                0x2000c534                b_Ssq
+                0x2000c538                PxS
+                0x2000c548                PaS
+                0x2000c54c                TxS
+                0x2000c55c                TxN
+                0x2000c56c                TaN
+                0x2000c56e                PbS
+                0x2000c570                TbN
+                0x2000c572                PcS
+                0x2000c574                TcS
+                0x2000c576                TcN
+                0x2000c578                PdS
+                0x2000c57a                TdS
+                0x2000c57c                TdN
+                0x2000c57e                HoldResetFlag
+                0x2000c57f                Options
+                0x2000c580                ClearLeadingEdge
+                0x2000c584                fi
+                0x2000cd84                WindowPosition
+                0x2000cd86                AutoTrigIni
+                0x2000cd87                TriggerType
+                0x2000cd88                ToggleName
+                0x2000cd89                StartUart
+                0x2000cd8a                InitiateUartGen
+                0x2000cd8b                ResetFlag
+                0x2000cd8c                InitiateNoise
+                0x2000cd8d                SerialStatus
+                0x2000cd90                X_Attr
+                0x2000cd94                DisableCursorTimer
+                0x2000cd95                DownConvertInitiate
+                0x2000cd96                DCbase
+                0x2000cd97                DCmode
+                0x2000cd98                DCframe
+                0x2000cd99                DCmeter
+                0x2000cd9a                DCt1
+                0x2000cd9c                FreqIN
+                0x2000cda0                FFTt1Mode
+                0x2000cda1                DownConvertShiftEnable
+                0x2000cda4                NFreq
+                0x2000cda8                FreqScaleShift
+                0x2000cdaa                DownConvert
+                0x2000cdd0                LfreqPeriod
+                0x2000cdd4                BaseFreqStr
+                0x2000cde0                PeakFreqStr
+                0x2000cdec                NFreqStr
+                0x2000cdf8                FreqT1Str
+                0x2000ce04                FreqDivStr
+                0x2000ce10                imax
+                0x2000ce14                PrecisionLevel
+                0x2000ce16                Posi_41
+                0x2000ce18                Posi_42
+                0x2000ce1a                Posi_4_2
+                0x2000ce1c                a_Max
+                0x2000ce1e                a_Min
+                0x2000ce20                b_Max
+                0x2000ce22                b_Min
+                0x2000ce24                aT_Max
+                0x2000ce26                bT_Max
+                0x2000ce28                aT_Min
+                0x2000ce2a                bT_Min
+                0x2000ce2c                CurDefTime
+                0x2000ce2d                exitflag
+                0x2000ce2e                freerun
+                0x2000ce2f                EnableFFT
+                0x2000ce30                fr
+                0x2000d630                FFTGain
+                0x2000d632                a_Mid_H
+                0x2000d634                QStart
+                0x2000d638                a_Mid_L
+                0x2000d63a                b_Mid_H
+                0x2000d63c                b_Mid_L
+                0x2000d63e                CalFlag
+                0x2000d640                QEnd
+                0x2000d644                ClearHoldFlag
+                0x2000d645                SlowModeSkip
+                0x2000d646                SumResetFlag
+                0x2000d647                WaitForTrigFlag
+                0x2000d648                OldShift
+                0x2000d649                discard
+                0x2000d64a                ResetEnableFFT
+                0x2000d64b                FrameEndFlag
+                0x2000d64c                HoldOnNext
+                0x2000d64d                BailoutFlag
+                0x2000d64e                entryflag
+                0x2000d64f                ErrorFlag
+                0x2000d650                CountUnread
+                0x2000d652                AltHoldoff
+                0x2000d654                PrevBatLevel
+                0x2000d658                T_Attr
+                0x2000d65c                G_Attr
+                0x2000d660                Y_Attr
+                0x2000d664                HardwareVersion
+                0x2000d668                FFTScale
+                0x2000d66c                FFTflag
+                0x2000d66e                PeakFreq
+ .bss           0x2000d670        0x0 startup.o
+ .bss           0x2000d670        0x0 stm32f10x_nvic.o
+ .bss           0x2000d670        0x0 cortexm3_macro.o
+ .bss           0x2000d670        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+ .bss           0x2000d670        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .bss           0x2000d670        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .bss           0x2000d670        0x0 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
+                0x2000d670                . = ALIGN (0x4)
+                0x2000d670                _ebss = .
+OUTPUT(app1.elf elf32-littlearm)
+
+.comment        0x00000000       0x30
+ .comment       0x00000000       0x30 Calibrat.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 Draw.o
+ .comment       0x00000000       0x31 Files.o
+ .comment       0x00000000       0x31 Function.o
+ .comment       0x00000000       0x31 Interrupt.o
+ .comment       0x00000000       0x31 Main.o
+ .comment       0x00000000       0x31 Menu.o
+ .comment       0x00000000       0x31 Process.o
+ .comment       0x00000000       0x31 startup.o
+ .comment       0x00000000       0x31 stm32f10x_nvic.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x33 Calibrat.o
+ .ARM.attributes
+                0x00000033       0x33 Draw.o
+ .ARM.attributes
+                0x00000066       0x33 Files.o
+ .ARM.attributes
+                0x00000099       0x33 Function.o
+ .ARM.attributes
+                0x000000cc       0x33 Interrupt.o
+ .ARM.attributes
+                0x000000ff       0x33 Main.o
+ .ARM.attributes
+                0x00000132       0x33 Menu.o
+ .ARM.attributes
+                0x00000165       0x33 Process.o
+ .ARM.attributes
+                0x00000198       0x33 startup.o
+ .ARM.attributes
+                0x000001cb       0x33 stm32f10x_nvic.o
+ .ARM.attributes
+                0x000001fe       0x21 cortexm3_macro.o
+ .ARM.attributes
+                0x0000021f       0x2b c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+ .ARM.attributes
+                0x0000024a       0x2b c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000275       0x2b c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000002a0       0x2b c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
+
+.debug_frame    0x00000000       0xa8
+ .debug_frame   0x00000000       0x2c c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcmp.o)
+ .debug_frame   0x0000002c       0x30 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x0000005c       0x2c c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x00000088       0x20 c:/program files/codesourcery/sourcery_codebench_lite_for_arm_eabi/bin/../lib/gcc/arm-none-eabi/4.6.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcpy.o)
