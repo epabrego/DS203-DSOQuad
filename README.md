@@ -9,6 +9,7 @@ Choose one option:
 - Option 1. Download Exe Installer
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi.exe
    - Install the compiler
+   - or
 
 - Option 2. Download Standalone archive
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi-i686-mingw32.tar.bz2
@@ -67,11 +68,12 @@ rm app1.elf
 
 You should find the compiled firmware file app1.hex (428,496 bytes)
 -
-- Put your DS203 into DFU mode (press and hold >|| button and power on) and copy the app1.hex to drive.
+- Put your DS203 into DFU mode (press and hold >|| button and power on) and copy the app1.hex to the DFU drive.
 
 NOTE:
 =
    - If you have WinAVR, cygwin or any other gcc installed, you might get errors.  Use where.exe command to make the correct arm-none-eabi-gcc.exe and cc1.exe are used.
+   - Before recompiling type: del *.o 
 
 Optional for HW 2.81 and later DEVICES ONLY
 -
