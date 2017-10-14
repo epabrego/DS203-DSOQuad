@@ -15,7 +15,7 @@ Choose one option:
 
 - Option 2. Download Standalone archive
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi-i686-mingw32.tar.bz2
-   - Extract archive using Winrar 5.21 to C:\arm-2014.05 (don't use 7zip as it creates some empty files)
+   - Extract archive using Winrar 5.21 to C:\arm-2014.05 (don't use 7zip as it creates some empty files):
    - Add C:\arm-2014.05\bin to system PATH
 
 Download DS203 source and extract 
@@ -51,6 +51,7 @@ To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode 
 
 - Credits and contributors:
    - jakub.jelinek
+   - Kainer 
    - Wildcat
    - Seeed-Studio
    - Marco Sinatti (marcosin)
