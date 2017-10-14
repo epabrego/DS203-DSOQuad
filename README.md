@@ -69,6 +69,10 @@ You should find the compiled firmware file app1.hex (428,496 bytes)
 -
 - Put your DS203 into DFU mode (press and hold >|| button and power on) and copy the app1.hex to drive.
 
+NOTE:
+=
+   - If you have WinAVR, cygwin or any other gcc installed, you might get errors.  Use where.exe command to make the correct arm-none-eabi-gcc.exe and cc1.exe are used.
+
 Optional for HW 2.81 and later DEVICES ONLY
 -
 To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
