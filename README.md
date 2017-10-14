@@ -2,6 +2,8 @@ WildcatV5.6 for HW 2.72 and older DEVICES ONLY
 =
 WildcatV6.5 for HW 2.81 and later DEVICES ONLY
 =
+![Image 17](screenshots/17.jpg)
+
 *** How to compile on a Windows Machine ***
 -
 Choose one option:
@@ -91,3 +93,53 @@ To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode 
    - JPA 
    - Jerson 
    - original authors minidso
+
+
+
+* A&B trigger mode (using V1 to read frequency of horizontal NTSC video signal sync pulses in cursor defined meter function while simultaneously triggering on sine wave of unrelated frequency)
+![Image 1](screenshots/1.jpg)
+
+* Cursor defined meter function (using T1 and T2 to read color burst parameters of NTSC video signal):
+![Image 2](screenshots/2.jpg)
+
+* Persistence mode of RF eye pattern in RAW data mode:        
+![Image 3](screenshots/3.jpg)
+
+* Persistence mode of a video signal in NORMAL data mode:       
+![Image 4](screenshots/4.jpg)
+
+* 30db additional FFT gain with auto scaling:                                  
+![Image 5](screenshots/5.jpg)
+
+* Voice print of person speaking:                                  
+![Image 6](screenshots/6.jpg)
+
+* MAP mode of video frame:                                                                    
+![Image 7](screenshots/7.jpg)
+
+* XY display of stationary pattern in persistence mode:                                  
+![Image 8](screenshots/8.jpg)
+
+* Frequency spectrum in log mode of 1Khz wave sampled at 720 points from internal generator:
+![Image 9](screenshots/9.jpg)
+
+* Frequency scale for spectrograph:                                  
+![Image 10](screenshots/10.jpg)
+
+* 2.5-10Khz Frequency response of loudspeaker. Fast sweeps minimize exciting room resonances, allowing reasonably accurate results:                                                                    
+![Image 11](screenshots/11.jpg)
+
+* Tone burst response a loudspeaker:                                  
+![Image 12](screenshots/12.jpg)
+
+* Quick scan to identify notch filter:                                  
+![Image 13](screenshots/13.jpg)
+
+* Expanded scan provides better resolution and proper depth of notch:
+![Image 14](screenshots/14.jpg)
+
+* RS232/TTL serial decoding:                                                                    
+![Image 15](screenshots/15.jpg)
+
+* Arbitrary waveform generator:                                  
+![Image 16](screenshots/16.jpg)
