@@ -6,11 +6,11 @@ How to compile on a Windows Machine
 ===================================
 Choice an option:
 - Option 1. Download Exe Installer
-. https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi.exe
+- https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi.exe
 
 - Option 2. Download Standalone archive
-   https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi-i686-mingw32.tar.bz2
-   Add C:\arm-2008q1\bin to system PATH
+-- https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi-i686-mingw32.tar.bz2
+-- Add C:\arm-2008q1\bin to system PATH
 
 
 Download DS203 source and extract 
