@@ -8,11 +8,12 @@ Choose one option:
 -
 - Option 1. Download Exe Installer
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi.exe
+   - Install the compiler
 
 - Option 2. Download Standalone archive
    - https://sourcery.mentor.com/public/gnu_toolchain/arm-none-eabi/arm-2014.05-28-arm-none-eabi-i686-mingw32.tar.bz2
-   - Add C:\arm-2008q1\bin to system PATH
-
+   - Extract archive using Winrar 5.21 to C:\arm-2014.05 (don't use 7zip as it creates some empty files)
+   - Add C:\arm-2014.05\bin to system PATH
 
 Download DS203 source and extract 
 -
@@ -21,7 +22,7 @@ Download DS203 source and extract
 
 Open a new Command Prompt Window
 -
-- in the Command Prompt, CD into Wildcat directory with all the source files from above step
+- in the Command Prompt, CD into /dso203-master/WildcatV6.5 directory with all the source files from above step
 
 Test the compiler
 -
@@ -70,7 +71,7 @@ You should find the compiled firmware file app1.hex (428,496 bytes)
 
 Optional for HW 2.81 and later DEVICES ONLY
 -
--To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
+To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
 
 - Credits and contributors:
    - jakub.jelinek
