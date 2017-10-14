@@ -49,22 +49,6 @@ Optional for HW 2.81 and later DEVICES ONLY
 -
 To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode to the device.
 
-- Credits and contributors:
-   - jakub.jelinek
-   - Kainer 
-   - Wildcat
-   - Seeed-Studio
-   - Marco Sinatti (marcosin)
-   - Gabriel Valky (gabonator1)
-   - pmoss69
-   - JackTheVendicator
-   - bobtidey 
-   - JPA 
-   - Jerson 
-   - original authors minidso
-
-
-
 * A&B trigger mode (using V1 to read frequency of horizontal NTSC video signal sync pulses in cursor defined meter function while simultaneously triggering on sine wave of unrelated frequency)
 ![Image 1](screenshots/1.jpg)
 
@@ -112,3 +96,17 @@ To get full speed oversampling, copy FPGA_281.ADR then FPGA_281.BIN in DFU mode 
 
 * Arbitrary waveform generator:                                  
 ![Image 16](screenshots/16.jpg)
+
+- Credits and contributors:
+   - jakub.jelinek
+   - Kainer 
+   - Wildcat
+   - Seeed-Studio
+   - Marco Sinatti (marcosin)
+   - Gabriel Valky (gabonator1)
+   - pmoss69
+   - JackTheVendicator
+   - bobtidey 
+   - JPA 
+   - Jerson 
+   - original authors minidso
