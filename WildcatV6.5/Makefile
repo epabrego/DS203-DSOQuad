@@ -49,7 +49,7 @@ clean:
 	$(CC) $(CFLAGS) -c -o $@ $*.c
 
 .s.o:
-	$(CC) $(AFLAGS) -c -o $@ $*.S
+	$(CC) $(AFLAGS) -c -o $@ $*.s
 
 %.elf: %.lds $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LDFLAGS) -T $<
