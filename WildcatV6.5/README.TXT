@@ -15,6 +15,71 @@ ANY FUTURE UPDATES FOR PRIOR HARDWARE VERSIONS WILL BE POSTED AS 5.X
 VERSIONS 6.0 AND LATER WILL BE ONLY COMPATIBLE WITH HW 2.81 DEVICES AND LATER DUE TO LARGER RAM SIZE AVAILABLE IN 
 THESE.
 
+--------------------------------------------
+INSTALLATION PROCEDURE:
+
+1] Put DS203 into DFU (device firmware update) mode:
+While power is down, press ">||" button, and while still holding this button down, power the device on
+
+2] Connect DS203 to PC (using USB cable). New removable USB drive should appear on your PC
+
+3a] Easy way - just copy the app1.hex file to that USB drive. After copying will finish, the USB drive should disappear briefly and reappear again and the extension of app1.hex will be changed to either .RDY (update successful) or .ERR (update NOT successful).
+If you get .RDY, then just power off the device and that's it. At next power on, you'll boot to updated app.
+If you get .ERR, try next step 3b].
+
+3b] The hard way - sometimes / on newer devices with newer DFU version (V3.46C), the 3a] step will not work (on Windows it will stop in the middle of copying, reporting that it cannot access the drive and on Linux it will finish copying, but .ERR extension will appear).
+I suspect that this is because this app is too big (for other smaller apps the 3a] is working ok).
+Fortunately, there's another way how to update - copying raw binary .BIN files to that USB drive. But in binary files, there is no information to which address / memory location to copy that raw data. So the procedure is in reality to copy .ADR file first and then .BIN
+.ADR files are plain text files, containing only one text line - 32-bit address in C-like hexadecimal format.
+(example of .ADR file):
+----
+0x0800C000
+----
+By doing this, we're telling to DFU that next .BIN file that will be copied should be written starting at that address.
+So we just need to convert our app1.hex to app1.bin file, right?
+----
+objcopy --input-target=ihex --output-target=binary app1.hex app1.bin
+----
+Well .. not so fast. If we do this, we'll overwrite other important data in flash memory! This is because the program code in app1.hex is not continuous. It's divided into 3 chunks that are on different locations in memory. By doing one .BIN, the gaps between program chunks will be stuffed by zeroes.
+So what we need to do is to analyze the .HEX file and separate it into smaller .HEX files where program data are continuous. See IHEX format for details (https://en.wikipedia.org/wiki/Intel_HEX).
+For this W6.5 version and app1.hex it will be:
+----
+app1_a_addr_0800C000.hex
+app1_b_addr_0802C000.hex
+app1_c_addr_08047000.hex 
+----
+(I've done this manually in text editor. There's probably a way how to do similar thing using ARM GNU toolchain tools, but this was faster for me).
+Then we'll convert to .BIN files:
+----
+objcopy --input-target=ihex --output-target=binary app1_addr_0800C000.hex app1_a.bin
+objcopy --input-target=ihex --output-target=binary app1_addr_0802C000.hex app1_b.bin
+objcopy --input-target=ihex --output-target=binary app1_addr_08047000.hex app1_c.bin
+----
+And manually create .ADR files with proper addresses:
+----
+app1_a.adr  <-- containing text "0x0800C000"
+app1_b.adr  <-- containing text "0x0802C000"
+app1_c.adr  <-- containing text "0x08047000"
+----
+OK! Now we're ready to update.
+Copy files to DS203's USB drive (while DS203 in in DFU mode) in this order:
+----
+app1_a.adr
+app1_a.hex
+app1_b.adr
+app1_b.hex
+app1_c.adr
+app1_c.hex
+----
+
+Tested on:
+DS203 purchased on Dec-01 2017 via eBay
+- HW ver. 2.82
+- DFU: V3.46C
+- SYS: ver. 1.64
+- original APP: ver. 1.13
+--------------------------------------------
+
 CHANGELOG TO VERSION W6.5:
 
 -Added high resolution FFT modes.
@@ -830,7 +895,7 @@ Just some fixes over marcosin 1.8 version of the DSO203 APP and GCC compilation 
 
 Contribute or simply enjoy.
 
-Pedro Simões
+Pedro SimÃµes
 
 -------------------------------------------
 
@@ -899,14 +964,14 @@ Marco Sinatti (marcosin) Revisions:
 Versione APP251_V1.0 Richiede FPGA V2.22 - SYS1.50
 -Tasto quadrato = Abilita il buffer ridotto a una schermata, disabilita lo scorrimento
 -Tasto triangolo = cambio visualizzatori misure
--Corretto visualizzazione unità di misura della frequenza
+-Corretto visualizzazione unitÃ  di misura della frequenza
 
 Versione APP251_1.1 Richiede FPGA V2.22 - SYS1.50
 -Aggiunto opzione portata x10 in modo da leggere la tensione corretta sui meter quando si utilizza la sonda x10
--Aggiunto accesso veloce ai cursoti V1 V2 T1 T2 in modo da poter andare direttamente a fare misure senza scorrere tutti i menù. Premendo il tasto si accede a V1, ripremendolo a V2, etc... dopo T2 si torna alla posizione da cui si era partiti
--Aggiunto livello trigger automatico, si setta da solo al centro della forma d'onda, il tasto è comodo anche per accedere al volo al menù trigger
--Aggiunto indicatore della batteria in carica, mentre stà caricando il riempimento della batteria scorre
--Tolto la modalità NONE sulla base dei tempi, perchè era identica a SCAN
+-Aggiunto accesso veloce ai cursoti V1 V2 T1 T2 in modo da poter andare direttamente a fare misure senza scorrere tutti i menÃ¹. Premendo il tasto si accede a V1, ripremendolo a V2, etc... dopo T2 si torna alla posizione da cui si era partiti
+-Aggiunto livello trigger automatico, si setta da solo al centro della forma d'onda, il tasto Ã¨ comodo anche per accedere al volo al menÃ¹ trigger
+-Aggiunto indicatore della batteria in carica, mentre stÃ  caricando il riempimento della batteria scorre
+-Tolto la modalitÃ  NONE sulla base dei tempi, perchÃ¨ era identica a SCAN
 -Modificato l'indicazione dell'impostazione a frame singolo, adesso viene evidenziata con un rettandolo sull'indicatore del buffer in basso
 -Migliorata l'acquisizione a frame singolo che lavorava male in alcune portate
 
@@ -915,15 +980,15 @@ Versione APP251_1.3 Richiede FPGA V2.22 - SYS1.50
 -Durante l'uso dei cursori, se i meter sono nascosti appare comunque il DeltaT e il DeltaV
 -Risolto bug sulla visualizzazione della linea che appare sui primi pixel dello schermo
 -Risolto bug aggiornamento livello trigger automatico
--Nella modalità trigger automatica si può decidere di impostare in automatico il livello a 1/2 1/4 3/4 della Vpp
--Modificato visualizzazione carica batteria con scorrimento quando effettivamente è in carica
--Aumentato velocità di scorrimento dei cursori di misurazione
--Modificato modalità di riduzione del buffer, adesso quando siamo in "frame singolo" in realtà lavora così:
-SCAN = cattura e visualizza un solo frame, purtroppo non è un roll vero
-NON SCAN = cattura 1,6 frame, in questo modo il trigger funziona bene, si ha la possibilità di scorrere la visualizzazione
--In modalità SCAN non si hanno più deformazioni della forma d'onda al centro dello schermo
--In modalità SCAN tolgo il riferimento della XPOS perchè non serve
--Aggiunto modalità PWM e regolazione ampiezza segnale in uscita, modificando il generatore di funzioni in questo modo:
+-Nella modalitÃ  trigger automatica si puÃ² decidere di impostare in automatico il livello a 1/2 1/4 3/4 della Vpp
+-Modificato visualizzazione carica batteria con scorrimento quando effettivamente Ã¨ in carica
+-Aumentato velocitÃ  di scorrimento dei cursori di misurazione
+-Modificato modalitÃ  di riduzione del buffer, adesso quando siamo in "frame singolo" in realtÃ  lavora cosÃ¬:
+SCAN = cattura e visualizza un solo frame, purtroppo non Ã¨ un roll vero
+NON SCAN = cattura 1,6 frame, in questo modo il trigger funziona bene, si ha la possibilitÃ  di scorrere la visualizzazione
+-In modalitÃ  SCAN non si hanno piÃ¹ deformazioni della forma d'onda al centro dello schermo
+-In modalitÃ  SCAN tolgo il riferimento della XPOS perchÃ¨ non serve
+-Aggiunto modalitÃ  PWM e regolazione ampiezza segnale in uscita, modificando il generatore di funzioni in questo modo:
 SQUARE = Onda quadra da 0Hz-20Khz con ampiezza regolabile da 0 a 2,6V
 TRIANG = Onda triangolare da 0Hz-20Khz con ampiezza regolabile da 0 a 2,6V
 SEW = Onda a dente di sega da 0Hz-20Khz con ampiezza regolabile da 0 a 2,6V
@@ -932,16 +997,16 @@ PWM = Segnale PWM con duty regolabile da 0 a 100 %, frequenza da 10Hz a 8Mhz.
 
 Versione APP251_1.4 Richiede FPGA V2.22 - SYS1.50_1.6 
 -Funzione X_Y (da terminare)
--Cambio rapido menù meter modificato, adesso con i canali C e D ad OFF quando si cambia i meter non li imposta sui canali disabilitati
+-Cambio rapido menÃ¹ meter modificato, adesso con i canali C e D ad OFF quando si cambia i meter non li imposta sui canali disabilitati
 -Sistemato SYS per il problema del range tensione
--Sistemato SYS sul menù calibrazione
+-Sistemato SYS sul menÃ¹ calibrazione
 -Rimodificato singolo frame, quando impostato non fa scorrere XPOS
 
 Versione APP251_1.5 Richiede FPGA V2.22 - SYS1.50_1.6 
 -Corretto visulizzazione DeltaV quando X10 sul canale B (prendeva sempre il canale A)
 
 Versione APP251_1.6  Richiede FPGA V2.22 - SYS150_1.6 
--Modalità SCAN a singolo frame in vero ROLL
+-ModalitÃ  SCAN a singolo frame in vero ROLL
 -Aggiunto 1-2-5Hz su generatore
 -Portato frequenza massima generatore a 50Khz 
 -Aumentato da 36 a 72 campionamenti la generazione delle forme d'onda
@@ -953,7 +1018,7 @@ Versione APP251_1.7  Richiede FPGA V2.22 - SYS150_1.6
 -NORMAL migliorato, non cancella lo schermo quando attende un nuovo trigger
 --------------
 Versione APP251_1.8  Richiede FPGA V2.22 - SYS150_1.6 
--Migliorato griglia e sistemato scala su modalità XY
+-Migliorato griglia e sistemato scala su modalitÃ  XY
 
 
 
