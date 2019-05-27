@@ -1,4 +1,3 @@
-
 Wildcat Community Edition revision (W6.5)
 =
 
@@ -9,23 +8,25 @@ Developed and tested with:
 - FPGA W1.1      (Custom FPGA for HW 2.81 archived with app)
 - HW 2.81        
 
-#### >> V6.2 AND UP WILL OVERWRITE THE FPGA IF LOADED ON EARLIER UNITS.  PLEASE MAKE SURE TO USE THE CORRECT VERSION FOR THE HARDWARE 
+**>> V6.2 AND UP WILL OVERWRITE THE FPGA IF LOADED ON EARLIER UNITS.  PLEASE MAKE SURE TO USE THE CORRECT VERSION FOR THE HARDWARE**
 
-#### - VERSIONS 6.0 and higher TO BE USED ONLY ON HARDWARE 2.81 OR HIGHER DEVICES
-#### - ANY FUTURE UPDATES FOR PRIOR HARDWARE VERSIONS WILL BE POSTED AS 5.X
-#### - VERSIONS 6.0 AND LATER WILL BE ONLY COMPATIBLE WITH HW 2.81 DEVICES AND LATER DUE TO LARGER RAM SIZE AVAILABLE IN THESE
+**- VERSIONS 6.0 and higher TO BE USED ONLY ON HARDWARE 2.81 OR HIGHER DEVICES**
 
-#### See [installation procedure](install_info) for details
+**- ANY FUTURE UPDATES FOR PRIOR HARDWARE VERSIONS WILL BE POSTED AS 5.X**
+
+**- VERSIONS 6.0 AND LATER WILL BE ONLY COMPATIBLE WITH HW 2.81 DEVICES AND LATER DUE TO LARGER RAM SIZE AVAILABLE IN THESE**
+
+**See [installation procedure](install_info) for details**
 
 ---
 
-#### CHANGELOG TO VERSION W6.5:
+### CHANGELOG TO VERSION W6.5:
 
 - Added high resolution FFT modes.
 
 - Shifted ROM addressing so both slot 3 and 4 are open.
 
-#### CHANGELOG TO VERSION W6.4:
+### CHANGELOG TO VERSION W6.4:
 
 - Added auto setting function.
 
@@ -55,7 +56,7 @@ Developed and tested with:
  sending writes back to overwrite the FAT. End of volume function in previous version prevented this, causing the new file to just be 
  truncated instead. Overwriting files with different lengths will now delete the previous file first, clearing all previous chaining info.
 
-#### CHANGELOG TO VERSION W6.3:
+### CHANGELOG TO VERSION W6.3:
 
 - Added file delete to directory functions. Also CSV and BIN (ROM image) files will now show in list.
 
@@ -78,7 +79,7 @@ Developed and tested with:
 
 - Replaced HEX display lookup chart for decode modes with function generating these to save ROM space.
 
-#### CHANGELOG TO VERSION W6.2:
+### CHANGELOG TO VERSION W6.2:
 
 - Added directory list display to load files, also ability to name files before saving.
 
@@ -96,7 +97,7 @@ Developed and tested with:
 
 - Changed "IMG" type file save (actually a .BIN file) to "ROM" to better clarify it's purpose.
 
-#### CHANGELOG TO VERSION W6.1:
+### CHANGELOG TO VERSION W6.1:
 
 - Updated chart mode with oversampling to fix improper ADC operation at very slow timebases.
 
@@ -111,7 +112,7 @@ Developed and tested with:
  in cursor restrict meter mode, regardless of whether freq meters are engaged or not. User manual has been updated
  on how to use DET frequency display.
 
-#### CHANGELOG TO VERSION W6.0:
+### CHANGELOG TO VERSION W6.0:
 
 - Increased RAM allocation from 48K to 64K and call stack from 8K to 16K. Fixes a variety of potential problems 
  such as loss of meter functions or triggering issues after config file saves. 
@@ -130,9 +131,9 @@ Developed and tested with:
  while in 500uS timebase if FFT is engaged or GEN set to one of the 2 fastest sweep/burst modes, subsequently 
  resetting on re-triggering event or setting changes. 
 
-#### LATER W5.x VERSIONS COMPILED FOR OLDER VERSIONS ONLY
+### LATER W5.x VERSIONS COMPILED FOR OLDER VERSIONS ONLY
 
-#### CHANGELOG TO VERSION W5.1:
+### CHANGELOG TO VERSION W5.1:
 
  - Added full speed buffer mode when used with Ver W1.1 FPGA on Hardware V2.81 devices
 
@@ -156,7 +157,7 @@ Developed and tested with:
   from specs still only appear to have 48K RAM. This may eventually necessitate 2 different versions
   as program size increases with added functions only available with the later hardware.  
 
-#### CHANGELOG TO VERSION W5.0:
+### CHANGELOG TO VERSION W5.0:
 
  - Detection of revised FPGA: Program will not shift to alternate time based mode when triggering 
   in level or edge mode at fastest timebases with new FPGA, improves triggering resolution.
@@ -183,7 +184,7 @@ Developed and tested with:
 
  - Fixed screen update after "scope disabled" notification while in XY mode with wave generator on. 
  
-#### CHANGELOG TO VERSION W4.5:
+### CHANGELOG TO VERSION W4.5:
 
  - Added version detection to properly implement the "2 least significant swapped bit issue" of 
   earlier FPGA versions.
@@ -210,7 +211,7 @@ Developed and tested with:
 
  - Fixed T cursor delta time display while in chart mode, now works up to 1000 seconds. 
 
-#### CHANGELOG TO VERSION W4.4:
+### CHANGELOG TO VERSION W4.4:
 
  - Added averaging and  oversampling buffer modes and related code to integrate with other functions
 
@@ -242,7 +243,7 @@ Developed and tested with:
 
  - Various minor menu bug fixes.
 
-#### CHANGELOG TO VERSION W4.3:
+### CHANGELOG TO VERSION W4.3:
 
  - Added UART serial code to generator functions, along with .UAR file load function.
 
@@ -252,7 +253,7 @@ Developed and tested with:
 and the program auto-synchronizing on a continuous data stream where the decoded data would
 blank out if the XPOS control toggle was held, and not reapear until it was released.
  
-#### CHANGELOG TO VERSION W4.2:
+### CHANGELOG TO VERSION W4.2:
 
  - Added chart mode.
 
@@ -262,7 +263,7 @@ out of bounds array access for TrackBuff[].
  - Compiled seperate version with speed optimizations, resides in first 3 slots with rest of code 
 at 0x4C000.
  
-#### CHANGELOG TO VERSION W4.1:
+### CHANGELOG TO VERSION W4.1:
 
  - Added i2C and SPI decode functions.
 
@@ -280,7 +281,7 @@ potential to.
  - This version only available in 3 slot version, not enough room in ROM to compile with speed 
 optimisations to fit within 4 slots.  
 
-#### CHANGELOG TO VERSION W4.0:
+### CHANGELOG TO VERSION W4.0:
 
  - NOTE: this version now utilizes 3 memory "slots".
 
@@ -303,7 +304,7 @@ helps in noisy environments when rather faint beeper can't be heard.
 
  - Included an otherwise identical in function higher performance 4 "slot" version.
   
-#### CHANGELOG TO VERSION W3.4:
+### CHANGELOG TO VERSION W3.4:
 
  - Fixed triggering issue in SINGLE mode in 2mS, 1mS and 500uS timebases (& possibly others) where the device
 would trigger twice if data captured would exceed length of the buffer, making it impossible to see the start of the
@@ -327,7 +328,7 @@ loose the ability to select menus upon loading it, caused by the menu focus bein
 are off. This could happen if a saved config had the menu focus on meters and button 3, which is also used to
 toggle meters on/off bounced while being used to save the config, simultaneously shutting meters off.      
 
-#### CHANGELOG TO VERSION W3.3:
+### CHANGELOG TO VERSION W3.3:
 
 - Added LOG amplitude scaling option to FFT display. Use left toggle in Ch D menu in notification
 area: LOG>AUTO>0db>+6db>....>+42db
@@ -379,7 +380,7 @@ be updated or would show incorrectly when changing settings until the device tri
 
 - More code compacting to keep program within 2 program slots + misc minor bug fixes.
 
-#### CHANGELOG TO VERSION W3.2:
+### CHANGELOG TO VERSION W3.2:
 
 - Added support for 8Mb devices, integrated bobtidey's code. (Untested at this time)
 
@@ -444,7 +445,7 @@ left of screen. Also FFT "peak" frequency display and indicator are turned off w
 - Various routine optimizations, refinements, minor bug fixes and code compacting to allow program to
 still fit within 2 slots without giving up any functionality.
 
-#### CHANGELOG TO VERSION W3.1:
+### CHANGELOG TO VERSION W3.1:
 
 - Fixed color background for FFT values being used from out of bounds array index, producing faint
 blue background (or possibly something else if recompiled) instead of black. Also changed FFT
@@ -482,7 +483,7 @@ increased size/complexity.
 
 - FFT summing mode now engages a bin earlier at the extreme left in the spectrum.
 
-#### CHANGELOG TO VERSION W3:
+### CHANGELOG TO VERSION W3:
 
 - Added Pmos69's FFT and spectrograph functions:
 
@@ -497,7 +498,7 @@ off.
 - Optimized code so still fits within 2 ROM "slots" (barely, beware if recompiling) - without
 spilling into the 3rd.
 
-#### CHANGELOG TO VERSION W2:
+### CHANGELOG TO VERSION W2:
 
 - Added on-screen chart showing functions of all buttons. Hold button 1 (> 1- 1/2 sec).
  Press any other button to execute it's normal function and exit chart or press button 1
@@ -650,7 +651,7 @@ spilling into the 3rd.
 - Various other minor interface changes (Colors, alignment and movement of trigger cursor,
  notifications, meter item selection) and fixes (dropped pixels, bug fixes, etc.) 
 
-#### USING MULTIPLE CONFIGURATION FILES:
+### USING MULTIPLE CONFIGURATION FILES:
  To prevent file corruption when using one of the original system versions, which are known
  to corrupt saved files, the program will not write additional config files (other than the
  regular #0 boot file) unless one already exists. In order to create these, the files already
@@ -666,7 +667,7 @@ spilling into the 3rd.
  older versions. A new config file though must be saved to hold settings for the added or
  modified functions and the calibration values.
  
-#### CALIBRATION:
+### CALIBRATION:
  Recalibration will be necessary. This version works a bit differently than previous versions
  so old settings probably will not be very accurate. When calibrating, try to center the
  "step center" indicator by adjusting the voltage source. This is very sensitive so a way to
@@ -694,7 +695,7 @@ spilling into the 3rd.
  will remain. This will at least remove undesirable DC offsets on each range and prevent
  shifts of offsets as Y positions are changed.
 
-#### CHANGELOG FOR REVISION W:
+### CHANGELOG FOR REVISION W:
 
 - Variable repeat rate for toggles, slow for menus, fast for verniers, etc.
 - Main Menu will stop at left (CH-A), and at right on Time Vernier or Volume adj, will not
@@ -713,7 +714,7 @@ spilling into the 3rd.
 - X_Y-A and X_Y-S removed, now only X_Y. Mode is triggered in AUTO mode to allow meters to
   work correctly. (Move trigg source to unused ch to disable triggering if desired).
 
-#### FIXES, MODIFICATIONS AND ADDITIONS:
+**FIXES, MODIFICATIONS AND ADDITIONS:**
 (List of most important issues, many others not listed)
 
 **TRIGGERING:**
@@ -788,7 +789,7 @@ spilling into the 3rd.
 - Re-aligned trigger point with trigger vernier
 - Fixed "time shift" at fastest timebases when changing time/div while on hold.
 
-#### PREVIOUS REVISIONS:
+### PREVIOUS REVISIONS:
 
 -------------------------------------------
 **DSO203 GCC v1.7 APP**
