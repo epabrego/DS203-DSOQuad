@@ -14,9 +14,9 @@
 ----
 
 **3a]** Easy way  
-Just copy the *app1.hex* file to USB drive. After copying will finish, the USB drive should disappear briefly and reappear again and the extension of *app1.hex* will be changed to either *.RDY* (update successful) or *.ERR* (update NOT successful).
-- If you get *.RDY*, then just turn off DS203 and that's it. (at next power on, you'll boot to updated app)  
-- If you get *.ERR*, try next step 3b].
+Just copy the *app1.hex* file to USB drive. After copying ends up, the USB drive should disappear briefly and reappear again and the extension of *app1.hex* will be changed to either *.RDY* (update successful) or *.ERR* (update NOT successful).
+- If you get *.RDY*, then just turn off DS203 and that's it (at next power on, you'll boot to updated app)  
+- If you get *.ERR*, try next step 3b]
 
 ----
 
@@ -64,7 +64,8 @@ And manually create *.ADR* files with proper addresses:
     app1_c.adr  <-- containing text "0x08047000"
 
 **OK! Now we're ready to update.  
-=> Copy these files to DS203's USB drive (while DS203 in in DFU mode) _in this order_:**
+=> Copy these files to DS203's USB drive (while DS203 is in DFU mode) _in this order_:**  
+(see directory *app1hex_to_bin* where I left this files already prepared for you)
 
     app1_a.adr
     app1_a.hex
