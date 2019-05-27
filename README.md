@@ -1,6 +1,7 @@
 WildcatV5.6 for HW 2.72 and older DEVICES ONLY
 =
 WildcatV6.5 for HW 2.81 and later DEVICES ONLY
+(see [installation procedure](http://github.com) for details)
 =
 ![Image 17](screenshots/17.jpg)
 
