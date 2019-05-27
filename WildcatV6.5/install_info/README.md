@@ -12,9 +12,9 @@ Turn DS203 off, press ">||" button and while holding this button down, turn DS20
 ----
 
 **3a]** Easy way  
-Just copy the *app1.hex* file to USB drive. After copying will finish, the USB drive should disappear briefly and reappear again and the extension of *app1.hex* will be changed to either *.RDY* (update successful) or *.ERR* (update NOT successful).  
-If you get *.RDY*, then just turn off DS203 and that's it. (at next power on, you'll boot to updated app)  
-If you get *.ERR*, try next step 3b].
+Just copy the *app1.hex* file to USB drive. After copying will finish, the USB drive should disappear briefly and reappear again and the extension of *app1.hex* will be changed to either *.RDY* (update successful) or *.ERR* (update NOT successful).
+- If you get *.RDY*, then just turn off DS203 and that's it. (at next power on, you'll boot to updated app)  
+- If you get *.ERR*, try next step 3b].
 
 ----
 
@@ -22,9 +22,10 @@ If you get *.ERR*, try next step 3b].
 (skip to ***"OK! Now we're ready to update"*** if you're not interrested in technical details)  
 <br />
 **Explanation:**  
-Sometimes / on newer devices with newer DFU version (V3.46C), the 3a] step will not work  
- - on Windows it will stop in the middle of copying, reporting that it cannot access the drive  
- - on Linux it will finish copying, but *.ERR* extension will appear  
+Sometimes / on newer devices with newer DFU version (V3.46C), the 3a] step will not work
+- on Windows it will stop in the middle of copying, reporting that it cannot access the drive
+- on Linux it will finish copying, but *.ERR* extension will appear
+
 I suspect that this is because this app is too big (for smaller apps the 3a] is working ok - tested).  
 <br />
 Fortunately, there's another way how to update - copying raw binary *.BIN* files to USB drive. But in binary files, there is no information to which address / memory location to copy that raw data. So the actual procedure in this case is in reality to copy *.ADR* file first and then *.BIN* file.  
