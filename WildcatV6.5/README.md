@@ -651,7 +651,7 @@ spilling into the 3rd.
 - Various other minor interface changes (Colors, alignment and movement of trigger cursor,
  notifications, meter item selection) and fixes (dropped pixels, bug fixes, etc.) 
 
-### USING MULTIPLE CONFIGURATION FILES:
+**USING MULTIPLE CONFIGURATION FILES:**
  To prevent file corruption when using one of the original system versions, which are known
  to corrupt saved files, the program will not write additional config files (other than the
  regular #0 boot file) unless one already exists. In order to create these, the files already
@@ -667,7 +667,7 @@ spilling into the 3rd.
  older versions. A new config file though must be saved to hold settings for the added or
  modified functions and the calibration values.
  
-### CALIBRATION:
+**CALIBRATION:**
  Recalibration will be necessary. This version works a bit differently than previous versions
  so old settings probably will not be very accurate. When calibrating, try to center the
  "step center" indicator by adjusting the voltage source. This is very sensitive so a way to
