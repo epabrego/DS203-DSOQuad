@@ -2,8 +2,10 @@
 
 ----
 
-**1]** Put DS203 into DFU (device firmware update) mode:  
-Turn DS203 off, press ">||" button and while holding this button down, turn DS203 on
+**1]** Put DS203 into DFU (device firmware update) mode:
+- Turn DS203 off
+- Press ">||" button
+- and while holding this button down, turn DS203 on
 
 ----
 
