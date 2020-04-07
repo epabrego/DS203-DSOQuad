@@ -1,4 +1,0 @@
-startup.c:214:6:__Init_Data	12	static
-startup.c:229:6:Reset_Handler	8	static
-startup.c:305:6:Default_Handler	0	static
-startup.c:309:6:_init	0	static
