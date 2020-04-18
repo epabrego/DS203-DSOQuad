@@ -43,7 +43,7 @@ all: $(OBJS) $(TARGETS)
 .PHONY: clean
 
 clean:
-	rm -rf $(OBJS) $(TARGETS)
+	rm -rf $(OBJS) $(TARGETS) *.d
 
 .c.o:
 	$(CC) $(CFLAGS) -c -o $@ $*.c
