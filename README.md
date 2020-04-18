@@ -1,7 +1,10 @@
 WildcatV5.6 for HW 2.72 and older DEVICES ONLY
 =
-WildcatV6.5 for HW 2.81 and later DEVICES ONLY
+WildcatV6.5 for HW 2.81 and later DEVICES ONLY  
+<sub>(see [installation procedure](WildcatV6.5/install_info) for details)</sub>
 =
+<br />
+
 ![Image 17](screenshots/17.jpg)
 
 *** How to compile on a Windows Machine ***
